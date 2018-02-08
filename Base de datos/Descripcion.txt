@@ -1,0 +1,3 @@
+Descripción
+Se desea diseñar una base de datos para profesores y estudiantes de la universidad de córdoba.
+En donde tienen un usuario y se necesita saber el id, nombre, apellido, identificación, contraseña en el cual un usuario solo puede pertenecer a una sola categoría (carrera) y en una categoría pueden pertenecer varios usuarios, de las categorías se interesa conocer el id, nombre y código, en una categoría puede tener varios proyectos, pero un proyecto solo puede existir en una categoría, cada vez que se realice una búsqueda quedara registrada en la base de datos.
