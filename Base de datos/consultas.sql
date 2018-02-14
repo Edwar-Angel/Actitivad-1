@@ -1,14 +1,12 @@
 #consultas SQL
+SELECT nombre,ano FROM proyecto WHERE ano = '2017'
 
-INSERT INTO carrera ( nombre, codigo) VALUE (  'Matematica', 06 )
-#Insertar una nueva carrera
+#selecciona el nombre y el año de los proyectos del año 2017
 
-SELECT * FROM usuarios WHERE nombre = 'Juan'
-#Búsqueda por categoría la carrera de informática 
+SELECT autor,ano FROM proyecto WHERE ano <='2012' 
 
-UPDATE usuarios SET contrasena = 123456789 WHERE usuario= 'dalia16'
-#Actualizar la contraseña de un usuario 
+#selecciona el autor y el año de ños proyectos quese alla publicado en el 2012 o antes de ese año 
 
-DELETE FROM carrera WHERE carrera.nombre = 'Matematica'
-#Eliminar información de la carrera
+SELECT carrera.nombre as carrera ,usuarios.nombre,usuario,correo FROM carrera INNER JOIN usuarios on usuarios.id_carrera=carrera.id
 
+#debuelve la carrera y el nombre, usuario y correo de un usuario registrado 
