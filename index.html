@@ -1,0 +1,70 @@
+<?php
+
+	include 'conectar.php';
+
+	$consulta = "SELECT id,nombre FROM carrera order by nombre asc";
+
+	$resultado = mysqli_query($conexion, $consulta);
+
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+    <body>    
+      
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12">
+	<form action="registrar_usuario.php" method="post" class="form-register" onsubmit="return validar();">
+		<h2>Registrarse</h2>
+		<div class="contenedor-inputs">		
+		
+			<input type="text" id="nombres" name="nombres" maxlength="30" placeholder="Nombres" class="input-100" required>
+			
+			<input type="text" id="apellidos" name="apellidos" maxlength="80" placeholder="Apellidos" class="input-100" required>
+						
+			<input type="text" id="identificacion" name="identificacion" maxlength="80" placeholder="identificacion" class="input-48" required>	
+					
+			<input type="email" id="correo" name="correo" maxlength="100" placeholder="E-mail" class="input-48" required>
+			
+			<input type="text" id="usuario" name="usuario" maxlength="15" placeholder="Usuario" class="input-48" required>
+			
+			<input type="password" id="clave" name="clave" maxlength="20" placeholder="Contraseña" class="input-48" required>
+                               
+            <select class="input-100" name="id_carrera" id="id_carrera" title="Selecciona una carrera">
+            	<option value="1">Informatica</option>
+            	<option value="2">Español</option>
+            	<option value="3">Quimica</option>
+            	<option value="4">Sociales</option>
+            	<option value="5">Biologia</option>
+            	<option value="6">Matematicas</option>
+            	<?php
+
+            		while($fila = mysqli_fetch_row($resultado)) {
+            			echo "<option value='".$fila[0]."'>".$fila[1]."</option>";
+            		}
+            	?>                
+            </select>					
+			
+			<input type="submit" value="Aceptar" class="btn btn-danger" id="boton">	<br/>
+				
+		<p class="form__link">¿Ya tienes cuenta?<a href="form_sesion.php">Ingresa aquí</a></p>		
+		</div>	
+	</form>	
+	</div>
+		
+	</div>
+    
+    </div> 
+		
+	<script src="js/jquery.js"></script>
+    <script src="js/boostrap.min.js"></script>
+    </body>
+</html>
