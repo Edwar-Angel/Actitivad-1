@@ -1,10 +1,9 @@
 #consultas SQL
-
-SELECT nombre,ano FROM proyecto WHERE ano = '2017'
+SELECT nombre,ano as año FROM proyecto WHERE ano = '2017'
 
 #selecciona el nombre y el año de los proyectos del año 2017
 
-SELECT autor,ano FROM proyecto WHERE ano <='2012' 
+SELECT autor, ano as año FROM proyecto WHERE  ano <='2012' 
 
 #selecciona el autor y el año de ños proyectos quese alla publicado en el 2012 o antes de ese año 
 
