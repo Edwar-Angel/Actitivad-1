@@ -1,0 +1,151 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+	background-image: url("fondo2.jpg");
+}
+
+.proyect {
+    text-align: center;
+}
+
+h1 {
+	color: #fff;
+	text-align: center;;
+}
+
+h2 {
+    text-align: center;
+    padding: 15px 0px 0px 0px;
+}
+
+#registro {
+
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  text-align: center;
+  color: white;
+  background: url("../img/intro-bg.jpg") no-repeat bottom center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#sesion {
+	display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  text-align: center;
+  color: white;
+  background: url("../img/intro-bg.jpg") no-repeat bottom center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.subtitulo {
+	color:black;
+	background-color: transparent;
+}
+
+.titulo {
+    color:aquamarine;
+    font-family: fantasy;
+}
+
+.form-register {
+	width: 95%;
+	max-width: 500px;
+	margin: auto;  
+	background-color: #fff;
+	border-radius: 15px;
+}
+
+
+.form-register {
+    margin-top: 100px;
+}
+
+.contenedor-inputs {
+	padding:10px 30px;
+	display: flex; /* para acomodar los inputs */
+	flex-wrap: wrap; /* para que el contenido que no entre se valla hacia abajo */
+	justify-content: space-between; /* para separar los inputs*/
+}
+
+.label {
+	color:black;
+}
+
+input {
+	margin-bottom: 15px;
+	padding:15px;
+	font-size: 16px;
+	border-radius: 3px;
+	border: 1px solid darkgray;
+}
+
+.input-48 {
+	width: 48%;
+}
+
+.input-48:focus {
+   border-color:dodgerBlue; 
+    box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+.input-100 {
+	width: 100%;
+}
+
+.input-100:focus {
+    border-color:dodgerBlue;  
+    box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+#boton {
+	
+	color:#fff;
+	margin: auto;
+	cursor:pointer; /* para cuando pase el cursor pase algo */
+	font-size: 15px;
+}
+
+#boton {
+
+	margin-top: 10px;
+}
+
+#boton:active {
+	transform: scale(1.05); /* para cuando de click se agrande un poco (efecto)*/
+}
+
+.color {
+	color:#000;
+}
+
+.form__link {
+	width: 100%; /* como el contenedor tiene flex-wrap, se va a bajar */
+	margin:7px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.form__link a {
+	color:blue;
+}
+
+.form__link a:hover {
+	text-decoration: underline;
+	color: blue;
+}
