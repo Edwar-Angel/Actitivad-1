@@ -1,0 +1,80 @@
+ {"proyecto":
+[ {
+    "id": "1",
+    "nombre": "TICs en la educación",
+    "autor": "Juan Perez",
+    "ano": "2014",
+    "id_carrera": "1",
+    "id_usuarios": "1"
+  },
+  {
+    "id": "2",
+    "nombre": "Lenguaje de señas",
+    "autor": "Sandra Arrieta",
+    "ano": "2010",
+    "id_carrera": "2",
+    "id_usuarios": "2"
+  },
+  {
+    "id": "3",
+    "nombre": "The numbers in inglish",
+    "autor": "Ana Vasquez",
+    "ano": "2017",
+    "id_carrera": "3",
+    "id_usuarios": "3"
+  },
+  {
+    "id": "4",
+    "nombre": "La revolución",
+    "autor": "Pedro Fernandez",
+    "ano": "2011",
+    "id_carrera": "4",
+    "id_usuarios": "4"
+  },
+  {
+    "id": "5",
+    "nombre": "Biocombustibles",
+    "autor": "Dalia Andrade",
+    "ano": "2017",
+    "id_carrera": "5",
+    "id_usuarios": "5"
+  },
+  {
+    "id": "6",
+    "nombre": "software y educación",
+    "autor": "Thalia Ramos",
+    "ano": "2010",
+    "id_carrera": "1",
+    "id_usuarios": "6"
+  },
+  {
+    "id": "7",
+    "nombre": "Estructuración social ",
+    "autor": "Angel Berrio ",
+    "ano": "2011",
+    "id_carrera": "4",
+    "id_usuarios": "7"
+  },
+  {
+    "id": "8",
+    "nombre": "Diversidad cultural",
+    "autor": "Rosio Bertel ",
+    "ano": "2012",
+    "id_carrera": "2",
+    "id_usuarios": "2"
+  },
+  {
+    "id": "9",
+    "nombre": "Métodos numéricos para ecuaciones",
+    "autor": "Amauris Arrieta",
+    "ano": "2009",
+    "id_carrera": "6",
+    "id_usuarios": "5"
+  },
+  {
+    "id": "11",
+    "nombre": "Álgebras de Clifford",
+    "autor": "Pablo Chacon"
+  }
+  ]
+}

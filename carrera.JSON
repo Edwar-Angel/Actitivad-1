@@ -1,0 +1,35 @@
+{
+   "carrera":[
+ 
+  {
+    "id": "1",
+    "nombre": "Informática",
+    "codigo": "01"
+  },
+  {
+    "id": "2",
+    "nombre": "Español",
+    "codigo": "02"
+  },
+  {
+    "id": "3",
+    "nombre": "Ingles",
+    "codigo": "03"
+  },
+  {
+    "id": "4",
+    "nombre": "Sociales",
+    "codigo": "04"
+  },
+  {
+    "id": "5",
+    "nombre": "Quimica",
+    "codigo": "05"
+  },
+  {
+    "id": "6",
+    "nombre": " Matematica ",
+    "codigo": "06"
+  }
+]
+}

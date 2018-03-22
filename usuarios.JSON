@@ -1,0 +1,73 @@
+[
+  {
+    "id": "1",
+    "nombre": "Juan",
+    "apellido1": "Perez",
+    "apellido2": "Rodriguez",
+    "identificacion": "646238428",
+    "correo": "juan@gmail.com",
+    "contrasena": "76764782",
+    "id_carrera": "1"
+  },
+  {
+    "id": "2",
+    "nombre": "Sandra",
+    "apellido1": "Arrieta",
+    "apellido2": "Torrente",
+    "identificacion": "765223533",
+    "correo": "sam@gmail.com",
+    "contrasena": "72367823",
+    "id_carrera": "2"
+  },
+  {
+    "id": "3",
+    "nombre": "Ana",
+    "apellido1": "Vasquez",
+    "apellido2": "Lopez",
+    "identificacion": "42764328",
+    "correo": "anita@gmail.com",
+    "contrasena": "68273468",
+    "id_carrera": "3"
+  },
+  {
+    "id": "4",
+    "nombre": "Pedro",
+    "apellido1": "Fernandez",
+    "apellido2": "Jimenez",
+    "identificacion": "326827623",
+    "correo": "pedro@gmail.com",
+    "contrasena": "87263813",
+    "id_carrera": "4"
+  },
+  {
+    "id": "5",
+    "nombre": "Dalia",
+    "apellido1": "Andrade",
+    "apellido2": "Calao",
+    "identificacion": "763287324",
+    "correo": "dalia@gmail.com",
+    "contrasena": "123456789",
+    "id_carrera": "5"
+  },
+  {
+    "id": "6",
+    "nombre": "Edwin",
+    "apellido1": "Rosario",
+    "apellido2": "Angel",
+    "identificacion": "10722344",
+    "correo": "edwin34@gmail.com",
+    "contrasena": "199523",
+    "id_carrera": "1"
+  },
+  {
+    "id": "7",
+    "nombre": "Jose ",
+    "apellido1": "Villalba",
+    "apellido2": "Osorio",
+    "identificacion": "273616122",
+    "correo": "villajose@gmail.com",
+    "contrasena": "244312431",
+    "id_carrera": "4"
+  }
+]
+
