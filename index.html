@@ -1,199 +1,38 @@
-<?php
-
-  include 'conectar.php';
-
-  $consulta = "SELECT id,nombre FROM carrera order by nombre asc";
-
-  $resultado = mysqli_query($conexion, $consulta);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-
+<!doctype html>
+<html class="no-js" lang="">
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue.js</title>
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-    <title>Base_de_datos_proyectos_unicor</title>
+<body>
+    <main>
+        <h1 v-if="informatica">bienbenido a informática</h1>
+          <template v-if="informatica">
+            <h3>Bienvenido Edwar Angel</h3>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <h2 v-if="año < 2018">proyecto  existe .</h2>
+        <h2 v-else-if="año > 2018">proyecto no existe .</h2>
+        <h2 v-else>proyecto existe.</h2>
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
-
-    <!-- Custom styles for this template -->
-    <link href="css/grayscale.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-
-  </head>
-
-  <body id="page-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Inicio</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#registro">Registro</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#sesion">Sesión</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#consulta">Consulta</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Intro Header -->
-    <header class="masthead">
-      <div class="intro-body">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 mn-auto">
-              <h1 class="brand-heading">Bienvenido</h1>
-              <p class="intro-text">En este sitio podrás ver y publicar proyectos de algunas carreras de la UniCor.
-                <br>Crea una cuenta a continuación.</p>
-              <a href="#registro" class="btn btn-circle js-scroll-trigger">
-                <i class="fa fa-angle-double-down animated"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- registro Section -->
-    <section id="registro" class="content-section text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 mx-auto">
-            <div class="fondo">
-            <form action="registrar_usuario.php" method="post" class="form-register" onsubmit="return validar();">
-              <h2 class="subtitulo">Registrarse</h2>
-              <div class="contenedor-inputs">   
-    
-                <input type="text" id="nombres" name="nombres" maxlength="30" placeholder="Nombres" class="input-100" required>
       
-                <input type="text" id="apellidos" name="apellidos" maxlength="80" placeholder="Apellidos" class="input-100" required>
-            
-                <input type="text" id="identificacion" name="identificacion" maxlength="80" placeholder="identificacion" class="input-48" required> 
-          
-                <input type="email" id="correo" name="correo" maxlength="100" placeholder="&#128388; E-mail" class="input-48" required> 
+            <ul>
+                <li>
+                    <a href="#">carreras</a>
+                    <a href="#">proyecto</a>
+                    <a href="#">Salir</a>
+                </li>
+            </ul>
+        </template>
+        <h4 v-else>No estás conectado :(</h4>
 
-                <input type="text" id="usuario" name="usuario" maxlength="15" placeholder="&#128272; Usuario" class="input-48" required>
-      
-                <input type="password" id="clave" name="clave" maxlength="20" placeholder="Contraseña" class="input-48" required>
-                               
-                  <select class="input-100" name="id_carrera" id="id_carrera" title="Selecciona una carrera">
-                    <option value="">Carrera</option>
-                      <?php
-
-                        while($fila = mysqli_fetch_row($resultado)) {
-                          echo "<option value='".$fila[0]."'>".$fila[1]."</option>";
-                        }
-                      ?>                
-                  </select>         
-      
-                <input type="submit" value="Aceptar" class="btn btn-danger" id="boton"> <br/>
-        
-                  <p class="form__link"><span class="color">¿Ya tienes cuenta?</span><a href="#sesion">Ingresa aquí</a></p>    
-              </div>   
-            </form> 
-          </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- sesion Section -->
-    <section id="sesion" class="sesion-section content-section text-center">
-      <div class="container">
-        <div class="col-md-12 mx-auto">
-          <form action="registrar_usuario.php" method="post" class="form-register" onsubmit="return validar();">
-            <h2 class="subtitulo">Iniciar sesión</h2>
-            <div class="contenedor-inputs">     
-          
-              <input type="text" id="usuario" name="usuario" maxlength="15" placeholder="&#128272; Usuario" class="input-100" required>
-      
-              <input type="password" id="clave" name="clave" maxlength="20" placeholder="&#128272; Contraseña" class="input-100" required>
-           
-              <input type="submit" value="Aceptar" class="btn btn-danger" id="boton">
-
-              <p class="form__link"><span class="color">¿No te has registrado?</span><a href="#registro">Ingresa aquí</a></p>  
-
-            </div>
-
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- consulta Section -->
-    <section id="consulta" class="content-section text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 mn-auto">
-
-            <form action="consulta.php" method="post" class="form-register" onsubmit="return validar();">
-            <h2 class="subtitulo">¿Que queres consultar?</h2>
-            <div class="contenedor-inputs">     
-              <label class="label">Escribe una consulta SQL</label>
-
-              <textarea class="input-100" id="consulta" maxlength="40" placeholder="Consulta SQL" required maxwidth="200px"></textarea>
-                        
-              <input type="submit" value="Aceptar" class="btn btn-danger" id="boton">                
-
-            </div>
-
-          </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Map Section -->
-    <div id="map"></div>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container text-center">
-        <p>Copyright &copy; Your Website 2018</p>
-      </div>
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/grayscale.min.js"></script>
-
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-  </body>
+        <pre>{{ $data }}</pre>
+    </main>
+    <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
 
 </html>
